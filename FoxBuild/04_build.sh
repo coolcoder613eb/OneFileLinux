@@ -11,12 +11,13 @@ MODULESPATH="$ROOTFS/lib/modules/"
 DEVURANDOM="$ROOTFS/dev/urandom"
 
 # Kernel variables
-KERNELVERSION="5.6.8"
-KERNELPATH="linux-5.6.8"
+KERNELVERSION="6.6.3"
+KERNELPATH="linux-6.6.3"
 export INSTALL_MOD_PATH="../$ROOTFS/"
 
 # Build threads equall CPU cores
-THREADS=$(getconf _NPROCESSORS_ONLN)
+THREADS=8
+#$(getconf _NPROCESSORS_ONLN)
 
 echo "      ____________  "
 echo "    /|------------| "
